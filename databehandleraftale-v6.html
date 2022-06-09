@@ -1,0 +1,1004 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Udkast til Databehandleraftale v. 6</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      font-size: 16px
+    }
+
+    .todo {
+      background-color: #FF4;
+    }
+
+    .jh {
+      background-color: #CFC;
+    }
+
+    .jhslet {
+      background-color: #FDD;
+    }
+
+    .jhnote {
+      background-color: #DDF;
+    }
+
+    li {
+      margin-bottom: .5em;
+    }
+
+    #toolbar {
+      background-color: #DDF;
+      position: sticky;
+      top: 0;
+      font-size: 14px;
+      border: 1px solid #008;
+      padding: 2px
+    }
+
+      #toolbar span {
+        border: 1px solid white
+      }
+
+    @media screen {
+      .pagebreak {
+        border-top: 1px dashed black;
+        margin-bottom: 1rem;
+      }
+    }
+
+    @media print {
+      .pagebreak {
+        page-break-before: always;
+      }
+
+      #toolbar {
+        display: block
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="toolbar">
+
+    <div style="display:inline-block">
+      <b>Udkast til JH Software Databehandleraftale v. 6</b>
+      Rev. 1 opdateret 17.5.2022 kl. 15:58.
+    </div>
+    <div style="display:inline-block">Baseret på Datatilsynets <a href="datatilsynet-skabelon-til-databehandleraftale-dansk-v1-1.docx">"Skabelon til databehandleraftale - dansk" version 1.1</a> (<a href="https://www.datatilsynet.dk/presse-og-nyheder/nyhedsarkiv/2019/dec/standardkontraktsbestemmelser-vedtaget-af-datatilsynet" target="_blank">info</a>)</div><br />
+    <label><input type="checkbox" checked onchange="VisDet('.todo',this.checked)"> Vis originalt udskifteligt indhold (anvisninger, eksempler, mv.) <span class="todo">(gult)</span></label><br />
+    <label><input type="checkbox" checked onchange="VisDet('.jhslet',this.checked)"> Vis slettet indhold <span class="jhslet">(rødt)</span></label><br />
+    <label><input type="checkbox" checked onchange="VisDet('.jh',this.checked)"> Vis indsat indhold <span class="jh">(grønt)</span></label><br />
+    <label><input type="checkbox" checked onchange="VisDet('.jhnote',this.checked)"> Vis noter (ikke del af aftale) <span class="jhnote">(blåt)</span></label><br />
+    <script>
+      function VisDet(qs, vis) {
+        document.querySelectorAll(qs).forEach(e => e.hidden = !vis);
+      }
+    </script>
+  </div>
+
+
+  <h3>Standardkontraktsbestemmelser</h3>
+
+  <p>i henhold til artikel 28, stk. 3, i forordning 2016/679 (databeskyttelsesforordningen) med henblik på databehandlerens behandling af personoplysninger</p>
+
+  <p>mellem</p>
+
+  <p>
+    <span class="todo">[NAVN]</span><span class="jh">#DA-NAVN#</span><br />
+    CVR <span class="todo">[CVR-NR]</span><span class="jh">#DA-CVR#</span><br />
+    <span class="todo">[ADRESSE]</span><span class="jh">#DA-ADRESSE#</span><br />
+    <span class="todo">[POSTNUMMER OG BY]</span><span class="jh">#DA-POSTNR# #DA-BY#</span><br />
+    <span class="todo">[LAND]</span><span class="jh">Danmark</span>
+  </p>
+
+  <p>herefter ”den dataansvarlige”</p>
+
+  <p>og</p>
+
+  <p>
+    <span class="todo">[NAVN]</span><span class="jh">JH Software ApS</span><br />
+    CVR <span class="todo">[CVR-NR]</span><span class="jh">28867077</span><br />
+    <span class="todo">[ADRESSE]</span><span class="jh">Vesteråsene 34</span><br />
+    <span class="todo">[POSTNUMMER OG BY]</span><span class="jh">9900 Frederikshavn</span><br />
+    <span class="todo">[LAND]</span><span class="jh">Danmark</span>
+  </p>
+
+  <p>herefter ”databehandleren”</p>
+
+  <p>der hver især er en ”part” og sammen udgør ”parterne”</p>
+
+  <p>HAR AFTALT følgende standardkontraktsbestemmelser (Bestemmelserne) med henblik på at overholde databeskyttelsesforordningen og sikre beskyttelse af privatlivets fred og fysiske personers grundlæggende rettigheder og frihedsrettigheder</p>
+
+  <div class="pagebreak"></div>
+
+  <p style="line-height:150%">
+    1. <b>Indhold</b><br />
+    2. Præambel<br />
+    3. Den dataansvarliges rettigheder og forpligtelser<br />
+    4. Databehandleren handler efter instruks<br />
+    5. Fortrolighed<br />
+    6. Behandlingssikkerhed<br />
+    7. Anvendelse af underdatabehandlere<br />
+    8. Overførsel til tredjelande eller internationale organisationer<br />
+    9. Bistand til den dataansvarlige<br />
+    10. Underretning om brud på persondatasikkerheden<br />
+    11. Sletning og returnering af oplysninger<br />
+    12. Revision, herunder inspektion<br />
+    13. Parternes aftale om andre forhold<br />
+    14. Ikrafttræden og ophør<br />
+    15. Kontaktpersoner hos den dataansvarlige og databehandleren<br />
+    Bilag A - Oplysninger om behandlingen<br />
+    Bilag B	- Underdatabehandlere<br />
+    Bilag C - Instruks vedrørende behandling af personoplysninger<br />
+    Bilag D	- Parternes regulering af andre forhold<br />
+  </p>
+
+  <div class="pagebreak"></div>
+
+  <h3>2. Præambel</h3>
+
+  <ol>
+    <li>Disse Bestemmelser fastsætter databehandlerens rettigheder og forpligtelser, når denne foretager behandling af personoplysninger på vegne af den dataansvarlige.</li>
+
+    <li>Disse bestemmelser er udformet med henblik på parternes efterlevelse af artikel 28, stk. 3, i Europa-Parlamentets og Rådets forordning (EU) 2016/679 af 27. april 2016 om beskyttelse af fysiske personer i forbindelse med behandling af personoplysninger og om fri udveksling af sådanne oplysninger og om ophævelse af direktiv 95/46/EF (databeskyttelsesforordningen).</li>
+
+    <li>I forbindelse med leveringen af <span class="todo">[TJENESTE]</span> <span class="jh">Tjek.net webstederne (se https://tjek.net)</span> behandler databehandleren personoplysninger på vegne af den dataansvarlige i overensstemmelse med disse Bestemmelser.</li>
+
+    <li>Bestemmelserne har forrang i forhold til eventuelle tilsvarende bestemmelser i andre aftaler mellem parterne.</li>
+
+    <li>Der hører fire bilag til disse Bestemmelser, og bilagene udgør en integreret del af Bestemmelserne.</li>
+
+    <li>Bilag A indeholder nærmere oplysninger om behandlingen af personoplysninger, herunder om behandlingens formål og karakter, typen af personoplysninger, kategorierne af registrerede og varighed af behandlingen.</li>
+
+    <li>Bilag B indeholder den dataansvarliges betingelser for databehandlerens brug af underdatabehandlere og en liste af underdatabehandlere, som den dataansvarlige har godkendt brugen af.</li>
+
+    <li>Bilag C indeholder den dataansvarliges instruks for så vidt angår databehandlerens behandling af personoplysninger, en beskrivelse af de sikkerhedsforanstaltninger, som databehandleren som minimum skal gennemføre, og hvordan der føres tilsyn med databehandleren og eventuelle underdatabehandlere.</li>
+
+    <li>Bilag D indeholder bestemmelser vedrørende andre aktiviteter, som ikke af omfattet af Bestemmelserne.</li>
+
+    <li>Bestemmelserne med tilhørende bilag skal opbevares skriftligt, herunder elektronisk, af begge parter.</li>
+
+    <li>Disse Bestemmelser frigør ikke databehandleren fra forpligtelser, som databehandleren er pålagt efter databeskyttelsesforordningen eller enhver anden lovgivning.</li>
+  </ol>
+
+
+  <h3>3. Den dataansvarliges rettigheder og forpligtelser</h3>
+
+  <ol>
+    <li>Den dataansvarlige er ansvarlig for at sikre, at behandlingen af personoplysninger sker i overensstemmelse med databeskyttelsesforordningen (se forordningens artikel 24), databeskyttelsesbestemmelser i anden EU-ret eller medlemsstaternes  nationale ret og disse Bestemmelser.</li>
+
+    <li>Den dataansvarlige har ret og pligt til at træffe beslutninger om, til hvilke(t) formål og med hvilke hjælpemidler, der må ske behandling af personoplysninger.</li>
+
+    <li>Den dataansvarlige er ansvarlig for, blandt andet, at sikre, at der er et behandlingsgrundlag for behandlingen af personoplysninger, som databehandleren instrueres i at foretage.</li>
+  </ol>
+
+
+  <h3>4. Databehandleren handler efter instruks</h3>
+
+  <ol>
+    <li>Databehandleren må kun behandle personoplysninger efter dokumenteret instruks fra den dataansvarlige, medmindre det kræves i henhold til EU-ret eller medlemsstaternes nationale ret, som databehandleren er underlagt. Denne instruks skal være specificeret i bilag A og C. Efterfølgende instruks kan også gives af den dataansvarlige, mens der sker behandling af personoplysninger, men instruksen skal altid være dokumenteret og opbevares skriftligt, herunder elektronisk, sammen med disse Bestemmelser.</li>
+
+    <li>Databehandleren underretter omgående den dataansvarlige, hvis en instruks efter vedkommendes mening er i strid med denne forordning eller databeskyttelsesbestemmelser i anden EU-ret eller medlemsstaternes nationale ret.</li>
+  </ol>
+
+  <div class="todo">[NOTE: PARTERNE BØR FORUDSE OG OVERVEJE KONSEKVENSERNE, DER KAN FØLGE AF EN POTENTIELT ULOVLIG INSTUKS, SOM DEN DATAANSVARLIGE HAR GIVET OG REGULERE DETTE I EN AFTALE MELLEM PARTERNE.]</div>
+
+  <h3>5. Fortrolighed</h3>
+
+  <ol>
+    <li>Databehandleren må kun give adgang til personoplysninger, som behandles på den dataansvarliges vegne, til personer, som er underlagt databehandlerens instruktionsbeføjelser, som har forpligtet sig til fortrolighed eller er underlagt en passende lovbestemt tavshedspligt, og kun i det nødvendige omfang. Listen af personer, som har fået tildelt adgang, skal løbende gennemgås. På baggrund af denne gennemgang kan adgangen til personoplysninger lukkes, hvis adgangen ikke længere er nødvendig, og personoplysningerne skal herefter ikke længere være tilgængelige for disse personer.</li>
+
+    <li>Databehandleren skal efter anmodning fra den dataansvarlige kunne påvise, at de pågældende personer, som er underlagt databehandlerens instruktionsbeføjelser, er underlagt ovennævnte tavshedspligt.</li>
+  </ol>
+
+
+  <h3>6. Behandlingssikkerhed</h3>
+
+  <ol>
+
+    <li>
+      Databeskyttelsesforordningens artikel 32 fastslår, at den dataansvarlige og databehandleren, under hensyntagen til det aktuelle tekniske niveau, implementeringsomkostningerne og den pågældende behandlings karakter, omfang, sammenhæng og formål samt risiciene af varierende sandsynlighed og alvor for fysiske personers rettigheder og frihedsrettigheder, gennemfører passende tekniske og organisatoriske foranstaltninger for at sikre et beskyttelsesniveau, der passer til disse risici.<br />
+      <br />
+      Den dataansvarlige skal vurdere risiciene for fysiske personers rettigheder og frihedsrettigheder som behandlingen udgør og gennemføre foranstaltninger for at imødegå disse risici. Afhængig af deres relevans kan det omfatte:<br />
+      <br />
+      <ol type="a">
+        <li>Pseudonymisering og kryptering af personoplysninger</li>
+        <li>evne til at sikre vedvarende fortrolighed, integritet, tilgængelighed og robusthed af behandlingssystemer og -tjenester</li>
+        <li>evne til rettidigt at genoprette tilgængeligheden af og adgangen til personoplysninger i tilfælde af en fysisk eller teknisk hændelse</li>
+        <li>en procedure for regelmæssig afprøvning, vurdering og evaluering af effektiviteten af de tekniske og organisatoriske foranstaltninger til sikring af behandlingssikkerhed.</li>
+      </ol>
+    </li>
+
+    <li>Efter forordningens artikel 32 skal databehandleren – uafhængigt af den dataansvarlige – også vurdere risiciene for fysiske personers rettigheder som behandlingen udgør og gennemføre foranstaltninger for at imødegå disse risici. Med henblik på denne vurdering skal den dataansvarlige stille den nødvendige information til rådighed for databehandleren som gør vedkommende i stand til at identificere og vurdere sådanne risici.</li>
+
+    <li>
+      Derudover skal databehandleren bistå den dataansvarlige med vedkommendes overholdelse af den dataansvarliges forpligtelse efter forordningens artikel 32, ved bl.a. at stille den nødvendige information til rådighed for den dataansvarlige vedrørende de tekniske og organisatoriske sikkerhedsforanstaltninger, som databehandleren allerede har gennemført i henhold til forordningens artikel 32, og al anden information, der er nødvendig for den dataansvarliges overholdelse af sin forpligtelse efter forordningens artikel 32.<br />
+      <br />
+      Hvis imødegåelse af de identificerede risici – efter den dataansvarliges vurdering – kræver gennemførelse af yderligere foranstaltninger end de foranstaltninger, som databehandleren allerede har gennemført, skal den dataansvarlige angive de yderligere foranstaltninger, der skal gennemføres, i bilag C.
+    </li>
+
+  </ol>
+
+  <h3>7. Anvendelse af underdatabehandlere</h3>
+
+
+  <ol class="jhslet">
+    <li>Databehandleren skal opfylde de betingelser, der er omhandlet i databeskyttelsesforordningens artikel 28, stk. 2, og stk. 4, for at gøre brug af en anden databehandler (en underdatabehandler).</li>
+
+    <li>Databehandleren må således ikke gøre brug af en underdatabehandler til opfyldelse af disse Bestemmelser uden forudgående <span class="todo">[VALG 1] specifik skriftlig godkendelse / [VALG 2] generel skriftlig godkendelse</span> fra den dataansvarlige.</li>
+
+    <li>
+      <span class="todo">[VALG 1 FORUDGÅENDE SPECIFIK GODKENDELSE]</span> Databehandleren må kun gøre brug af underdatabehandlere med den dataansvarliges forudgående specifikke skriftlige godkendelse. Databehandleren skal indgive anmodningen om en specifik godkendelse mindst <span class="todo">[ANGIV TIDSPERIODE]</span> inden anvendelsen af den pågældende underdatabehandler. Listen over underdatabehandlere, som den dataansvarlige allerede har godkendt, fremgår af bilag B.<br />
+      <br />
+      <span class="todo">[VALG 2 FORUDGÅENDE GENEREL GODKENDELSE]</span> Databehandleren har den dataansvarliges generelle godkendelse til brug af underdatabehandlere. Databehandleren skal skriftligt underrette den dataansvarlige om eventuelle planlagte ændringer vedrørende tilføjelse eller udskiftning af underdatabehandlere med mindst <span class="todo">[ANGIV TIDSPERIODE]</span> varsel og derved give den dataansvarlige mulighed for at gøre indsigelse mod sådanne ændringer inden brugen af de(n) omhandlede underdatabehandler(e). Længere varsel for underretning i forbindelse med specifikke behandlingsaktiviteter kan angives i bilag B. Listen over underdatabehandlere, som den dataansvarlige allerede har godkendt, fremgår af bilag B.
+    </li>
+
+    <li>
+      Når databehandleren gør brug af en underdatabehandler i forbindelse med udførelse af specifikke behandlingsaktiviteter på vegne af den dataansvarlige, skal databehandleren, gennem en kontrakt eller andet retligt dokument i henhold til EU-retten eller medlemsstaternes nationale ret, pålægge underdatabehandleren de samme databeskyttelsesforpligtelser som dem, der fremgår af disse Bestemmelser, hvorved der navnlig stilles de fornødne garantier for, at underdatabehandleren vil gennemføre de tekniske og organisatoriske foranstaltninger på en sådan måde, at behandlingen overholder kravene i disse Bestemmelser og databeskyttelsesforordningen.<br />
+      <br />
+      Databehandleren er derfor ansvarlig for at kræve, at underdatabehandleren som minimum overholder databehandlerens forpligtelser efter disse Bestemmelser og databeskyttelsesforordningen.
+    </li>
+
+    <li>Underdatabehandleraftale(r) og eventuelle senere ændringer hertil sendes – efter den dataansvarliges anmodning herom – i kopi til den dataansvarlige, som herigennem har mulighed for at sikre sig, at tilsvarende databeskyttelsesforpligtelser som følger af disse Bestemmelser er pålagt underdatabehandleren. Bestemmelser om kommercielle vilkår, som ikke påvirker det databeskyttelsesretlige indhold af underdatabehandleraftalen, skal ikke sendes til den dataansvarlige.</li>
+
+    <li>Databehandleren skal i sin aftale med underdatabehandleren indføje den dataansvarlige som begunstiget tredjemand i tilfælde af databehandlerens konkurs, således at den dataansvarlige kan indtræde i databehandlerens rettigheder og gøre dem gældende over for underdatabehandlere, som f.eks. gør den dataansvarlige i stand til at instruere underdatabehandleren i at slette eller tilbagelevere personoplysningerne.</li>
+
+    <li>Hvis underdatabehandleren ikke opfylder sine databeskyttelsesforpligtelser, forbliver databehandleren fuldt ansvarlig over for den dataansvarlige for opfyldelsen af underdatabehandlerens forpligtelser. Dette påvirker ikke de registreredes rettigheder, der følger af databeskyttelsesforordningen, herunder særligt forordningens artikel 79 og 82, over for den dataansvarlige og databehandleren, herunder underdatabehandleren.</li>
+
+  </ol>
+
+  <ol class="jh">
+    <li>Databehandleren må IKKE anvende underdatabehandlere.</li>
+  </ol>
+
+
+  <h3>8. Overførsel til tredjelande eller internationale organisationer</h3>
+
+  <ol class="jhslet">
+    <li>Enhver overførsel af personoplysninger til tredjelande eller internationale organisationer må kun foretages af databehandleren på baggrund af dokumenteret instruks herom fra den dataansvarlige og skal altid ske i overensstemmelse med databeskyttelsesforordningens kapitel V.</li>
+
+    <li>Hvis overførsel af personoplysninger til tredjelande eller internationale organisationer, som databehandleren ikke er blevet instrueret i at foretage af den dataansvarlige, kræves i henhold til EU-ret eller medlemsstaternes nationale ret, som databehandleren er underlagt, skal databehandleren underrette den dataansvarlige om dette retlige krav inden behandling, medmindre den pågældende ret forbyder en sådan underretning af hensyn til vigtige samfundsmæssige interesser.</li>
+
+    <li>
+      Uden dokumenteret instruks fra den dataansvarlige kan databehandleren således ikke inden for rammerne af disse Bestemmelser:<br />
+      <br />
+      <ol type="a">
+        <li>overføre personoplysninger til en dataansvarlig eller databehandler i et tredjeland eller en international organisation</li>
+        <li>overlade behandling af personoplysninger til en underdatabehandler i et tredjeland</li>
+        <li>behandle personoplysningerne i et tredjeland</li>
+      </ol>
+    </li>
+
+    <li>Den dataansvarliges instruks vedrørende overførsel af personoplysninger til et tredjeland, herunder det eventuelle overførselsgrundlag i databeskyttelsesforordningens kapitel V, som overførslen er baseret på, skal angives i bilag C.6.</li>
+
+    <li>Disse Bestemmelser skal ikke forveksles med standardkontraktsbestemmelser som omhandlet i databeskyttelsesforordningens artikel 46, stk. 2, litra c og d, og disse Bestemmelser kan ikke udgøre et grundlag for overførsel af personoplysninger som omhandlet i databeskyttelsesforordningens kapitel V.</li>
+  </ol>
+
+  <ol class="jh">
+    <li>Databehandleren må IKKE overføre personoplysningen til tredjeland eller internationale organisationer.</li>
+  </ol>
+
+  <h3>9. Bistand til den dataansvarlige</h3>
+  <ol>
+    <li>
+      Databehandleren bistår, under hensyntagen til behandlingens karakter, så vidt muligt den dataansvarlige ved hjælp af passende tekniske og organisatoriske foranstaltninger med opfyldelse af den dataansvarliges forpligtelse til at besvare anmodninger om udøvelsen af de registreredes rettigheder som fastlagt i databeskyttelsesforordningens kapitel III.<br />
+      <br />
+      Dette indebærer, at databehandleren så vidt muligt skal bistå den dataansvarlige i forbindelse med, at den dataansvarlige skal sikre overholdelsen af:<br />
+      <br />
+      <ol type="a">
+        <li>oplysningspligten ved indsamling af personoplysninger hos den registrerede</li>
+        <li>oplysningspligten, hvis personoplysninger ikke er indsamlet hos den registrerede</li>
+        <li>indsigtsretten</li>
+        <li>retten til berigtigelse</li>
+        <li>retten til sletning (”retten til at blive glemt”)</li>
+        <li>retten til begrænsning af behandling</li>
+        <li>underretningspligten i forbindelse med berigtigelse eller sletning af personoplysninger eller begrænsning af behandling</li>
+        <li>retten til dataportabilitet</li>
+        <li>retten til indsigelse</li>
+        <li>retten til ikke at være genstand for en afgørelse, der alene er baseret på automatisk behandling, herunder profilering</li>
+      </ol>
+    </li>
+
+    <li>
+      I tillæg til databehandlerens forpligtelse til at bistå den dataansvarlige i henhold til Bestemmelse 6.3., bistår databehandleren endvidere, under hensyntagen til behandlingens karakter og de oplysninger, der er tilgængelige for databehandleren, den dataansvarlige med:<br />
+      <br />
+      <ol type="a">
+        <li>den dataansvarliges forpligtelse til uden unødig forsinkelse og om muligt senest 72 timer, efter at denne er blevet bekendt med det, at anmelde brud på persondatasikkerheden til den kompetente tilsynsmyndighed, <span class="todo">[ANGIV KOMPETENT TILSYNSMYNDIGHED]</span> <span class="jh">Datatilsynet</span>, medmindre at det er usandsynligt, at bruddet på persondatasikkerheden indebærer en risiko for fysiske personers rettigheder eller frihedsrettigheder</li>
+
+        <li>den dataansvarliges forpligtelse til uden unødig forsinkelse at underrette den registrerede om brud på persondatasikkerheden, når bruddet sandsynligvis vil medføre en høj risiko for fysiske personers rettigheder og frihedsrettigheder</li>
+
+        <li>den dataansvarliges forpligtelse til forud for behandlingen at foretage en analyse af de påtænkte behandlingsaktiviteters konsekvenser for beskyttelse af personoplysninger (en konsekvensanalyse)</li>
+
+        <li>den dataansvarliges forpligtelse til at høre den kompetente tilsynsmyndighed, <span class="todo">[ANGIV KOMPETENT TILSYNSMYNDIGHED]</span> <span class="jh">Datatilsynet</span>, inden behandling, såfremt en konsekvensanalyse vedrørende databeskyttelse viser, at behandlingen vil føre til høj risiko i mangel af foranstaltninger truffet af den dataansvarlige for at begrænse risikoen.</li>
+      </ol>
+    </li>
+
+    <li>Parterne skal i bilag C angive de fornødne tekniske og organisatoriske foranstaltninger, hvormed databehandleren skal bistå den dataansvarlige samt i hvilket omfang og udstrækning. Det gælder for de forpligtelser, der følger af Bestemmelse 9.1. og 9.2.</li>
+
+  </ol>
+
+  <h3>10. Underretning om brud på persondatasikkerheden</h3>
+
+  <ol>
+    <li>Databehandleren underretter uden unødig forsinkelse den dataansvarlige efter at være blevet opmærksom på, at der er sket et brud på persondatasikkerheden.</li>
+
+    <li>Databehandlerens underretning til den dataansvarlige skal om muligt ske senest <span class="todo">[ANTAL TIMER]</span> <span class="jh">24 timer</span> efter, at denne er blevet bekendt med bruddet, sådan at den dataansvarlige kan overholde sin forpligtelse til at anmelde bruddet på persondatasikkerheden til den kompetente tilsynsmyndighed, jf. databeskyttelsesforordningens artikel 33.</li>
+
+    <li>
+      I overensstemmelse med Bestemmelse 9.2.a skal databehandleren bistå den dataansvarlige med at foretage anmeldelse af bruddet til den kompetente tilsynsmyndighed. Det betyder, at databehandleren skal bistå med at tilvejebringe nedenstående information, som ifølge artikel 33, stk. 3, skal fremgå af den dataansvarliges anmeldelse af bruddet til den kompetente tilsynsmyndighed:<br />
+      <br />
+      <ol type="a">
+        <li>karakteren af bruddet på persondatasikkerheden, herunder, hvis det er muligt, kategorierne og det omtrentlige antal berørte registrerede samt kategorierne og det omtrentlige antal berørte registreringer af personoplysninger</li>
+
+        <li>de sandsynlige konsekvenser af bruddet på persondatasikkerheden</li>
+
+        <li>de foranstaltninger, som den dataansvarlige har truffet eller foreslår truffet for at håndtere bruddet på persondatasikkerheden, herunder, hvis det er relevant, foranstaltninger for at begrænse dets mulige skadevirkninger.</li>
+      </ol>
+    </li>
+
+    <li>Parterne skal i bilag C angive den information, som databehandleren skal tilvejebringe i forbindelse med sin bistand til den dataansvarlige i dennes forpligtelse til at anmelde brud på persondatasikkerheden til den kompetente tilsynsmyndighed.</li>
+  </ol>
+
+  <h3>11. Sletning og returnering af oplysninger</h3>
+  <ol>
+    <li>Ved ophør af tjenesterne vedrørende behandling af personoplysninger, er databehandleren forpligtet til at <span class="todo">[VALG 1] slette alle personoplysninger, der er blevet behandlet på vegne af den dataansvarlige og bekræfte over for den dataansvarlig, at oplysningerne er slettet / [VALG 2] tilbagelevere alle personoplysningerne og slette eksisterende kopier</span> <span class="jh">slette alle personoplysninger, der er blevet behandlet på vegne af den dataansvarlige og bekræfte over for den dataansvarlig, at oplysningerne er slettet</span>, medmindre EU-retten eller medlemsstaternes nationale ret foreskriver opbevaring af personoplysningerne.</li>
+
+    <li class="jhslet">
+      <span class="todo">[HVIS RELEVANT]</span> Følgende regler i EU-retten eller medlemsstaternes nationale ret foreskriver opbevaring af personoplysningerne efter ophør af tjenesterne vedrørende behandling af personoplysninger:<br />
+      <br />
+      a.	[…]<br />
+      <br />
+      Databehandleren forpligter sig til alene at behandle personoplysningerne til de(t) formål, i den periode og under de betingelser, som disse regler foreskriver.
+    </li>
+  </ol>
+
+  <h3>12. Revision, herunder inspektion</h3>
+  <ol>
+    <li>Databehandleren stiller alle oplysninger, der er nødvendige for at påvise overholdelsen af databeskyttelsesforordningens artikel 28 og disse Bestemmelser, til rådighed for den dataansvarlige og giver mulighed for og bidrager til revisioner, herunder inspektioner, der foretages af den dataansvarlige eller en anden revisor, som er bemyndiget af den dataansvarlige.</li>
+
+    <li>Procedurerne for den dataansvarliges revisioner, herunder inspektioner, med databehandleren og underdatabehandlere er nærmeret angivet i Bilag C.7. og C.8.</li>
+
+    <li>Databehandleren er forpligtet til at give tilsynsmyndigheder, som efter gældende lovgivningen har adgang til den dataansvarliges eller databehandlerens faciliteter, eller repræsentanter, der optræder på tilsynsmyndighedens vegne, adgang til databehandlerens fysiske faciliteter mod behørig legitimation.</li>
+  </ol>
+
+  <h3>13. Parternes aftale om andre forhold</h3>
+  <ol>
+    <li>Parterne kan aftale andre bestemmelser vedrørende tjenesten vedrørende behandling af personoplysninger om f.eks. erstatningsansvar, så længe disse andre bestemmelser ikke direkte eller indirekte strider imod Bestemmelserne eller forringer den registreredes grundlæggende rettigheder og frihedsrettigheder, som følger af databeskyttelsesforordningen.</li>
+  </ol>
+
+  <h3>14. Ikrafttræden og ophør</h3>
+  <ol>
+    <li>Bestemmelserne træder i kraft på datoen for begge parters underskrift heraf.</li>
+
+    <li>Begge parter kan kræve Bestemmelserne genforhandlet, hvis lovændringer eller uhensigtsmæssigheder i Bestemmelserne giver anledning hertil.</li>
+
+    <li>Bestemmelserne er gældende, så længe tjenesten vedrørende behandling af personoplysninger varer. I denne periode kan Bestemmelserne ikke opsiges, medmindre andre bestemmelser, der regulerer levering af tjenesten vedrørende behandling af personoplysninger, aftales mellem parterne.</li>
+
+    <li>Hvis levering af tjenesterne vedrørende behandling af personoplysninger ophører, og personoplysningerne er slettet eller returneret til den dataansvarlige i overensstemmelse med Bestemmelse 11.1 og Bilag C.4, kan Bestemmelserne opsiges med skriftlig varsel af begge parter.</li>
+
+    <li>
+      Underskrift<br />
+      <br />
+      På vegne af den dataansvarlige<br />
+      <br />
+      <table>
+        <tr><td>Navn</td><td><span class="todo">[NAVN]</span><span class="jh">#DA-NAVN#</span></td></tr>
+        <tr><td>Stilling</td><td><span class="todo">[STILLING]</span><span class="jh">#DA-STILLING#</span></td></tr>
+        <tr><td>Telefonnummer&nbsp;&nbsp;&nbsp;</td><td><span class="todo">[TELEFONNUMMER]</span><span class="jh">#DA-TLF#</span></td></tr>
+        <tr><td>E-mail</td><td><span class="todo">[E-MAIL]</span><span class="jh">#DA-EMAIL#</span></td></tr>
+      </table>
+      <br />
+      <span class="jh">#DA-UNDERSKRIFT#</span><br />
+      _____________________________________<br />
+      Underskrift<br />
+      <br />
+      På vegne af databehandleren<br />
+      <br />
+      <table>
+        <tr><td>Navn</td><td><span class="todo">[NAVN]</span><span class="jh">Jesper Høy</span></td></tr>
+        <tr><td>Stilling</td><td><span class="todo">[STILLING]</span><span class="jh">Direktør</span></td></tr>
+        <tr><td>Telefonnummer&nbsp;&nbsp;&nbsp;</td><td><span class="todo">[TELEFONNUMMER]</span><span class="jh">71 78 53 34</span></td></tr>
+        <tr><td>E-mail</td><td><span class="todo">[E-MAIL]</span><span class="jh">support@tjek.net</span></td></tr>
+      </table>
+      <br />
+
+      <br />
+      <!--<img src="databehandleraftale-sig.png" style="width:25%" /><br />-->
+      <span class="jh">#JH-UNDERSKRIFT#</span><br />
+      _____________________________________<br />
+      Underskrift<br />
+      <br />
+  </ol>
+
+  <h3>15. Kontaktpersoner hos den dataansvarlige og databehandleren</h3>
+  <ol>
+    <li>Parterne kan kontakte hinanden via nedenstående kontaktpersoner.</li>
+
+    <li>
+      Parterne er forpligtet til løbende at orientere hinanden om ændringer vedrørende kontaktpersoner.<br />
+      <br />
+      <table>
+        <tr><td>Navn</td><td><span class="todo">[NAVN]</span><span class="jh">#DA-NAVN#</span></td></tr>
+        <tr><td>Stilling</td><td><span class="todo">[STILLING]</span><span class="jh">#DA-STILLING#</span></td></tr>
+        <tr><td>Telefonnummer&nbsp;&nbsp;&nbsp;</td><td><span class="todo">[TELEFONNUMMER]</span><span class="jh">#DA-TLF#</span></td></tr>
+        <tr><td>E-mail</td><td><span class="todo">[E-MAIL]</span><span class="jh">#DA-EMAIL#</span></td></tr>
+      </table>
+      <br />
+
+      <table>
+        <tr><td>Navn</td><td><span class="todo">[NAVN]</span><span class="jh">Jesper Høy</span></td></tr>
+        <tr><td>Stilling</td><td><span class="todo">[STILLING]</span><span class="jh">Direktør</span></td></tr>
+        <tr><td>Telefonnummer&nbsp;&nbsp;&nbsp;</td><td><span class="todo">[TELEFONNUMMER]</span><span class="jh">71 78 53 34</span></td></tr>
+        <tr><td>E-mail</td><td><span class="todo">[E-MAIL]</span><span class="jh">support@tjek.net</span></td></tr>
+      </table>
+
+  </ol>
+
+  <div class="pagebreak"></div>
+
+  <h3>Bilag A	- Oplysninger om behandlingen</h3>
+
+  <p class="todo">[BEMÆRK: I TILFÆLDE AF FLERE BEHANDLINGSAKTIVITETER, SKAL DISSE OPLYSNINGER FREMGÅ FOR HVER ENKELT BEHANDLINGSAKTIVITET]</p>
+
+  <p class="jh">
+    Databehandleren udvikler og udgiver Tjek web-stederne (Biologi-Tjek, Geografi-Tjek, Fysik-Kemi-Tjek, Matematik-Tjek, Natur-Teknologi-Tjek, m.fl.) henvendt til grundskolen. Webstederne indeholder primært emneopdelte trænings- og test-opgaver, som i layout og indhold ligner de digitale afgangsprøver og nationale test. Se https://tjek.net.
+
+    Databehandleren behandler personoplysninger for dataansvarlig når dataansvarlig tegner abonnement(er) på et eller flere af Tjek web-stederne.
+  </p>
+
+  <p><b>A.1. Formålet med databehandlerens behandling af personoplysninger på vegne af den dataansvarlige</b></p>
+
+  <p class="todo">[BESKRIV FORMÅLET MED BEHANDLINGEN]</p>
+
+  <p class="jh">
+    Behandlingerne har til formål at muliggøre varetagelsen af dataansvarligs opgaver i forhold til at fremme børn og unges udvikling og læring
+    - gennem anvendelse af Tjek web-stederne.
+  </p>
+
+
+  <p><b>A.2. Databehandlerens behandling af personoplysninger på vegne af den dataansvarlige drejer sig primært om (karakteren af behandlingen)</b></p>
+
+  <p class="todo">[BESKRIV KARAKTEREN AF BEHANDLINGEN]</p>
+
+  <div class="jh">
+    <p>
+      Behandling af personoplysninger sker primært for at identificere elever og deres handlinger over for lærere på Tjek web-stederne.
+      F.eks. således at en lærer kan se hvilke elever der har besvaret et opgavesæt og hvordan.
+    </p>
+    <p>Elevers og læreres e-mail adresser (hvis oplyst) bruges til administrative forhold (f.eks. ændring af adgangskode), notifikation om abonnement-forhold og evt. nyheder iht. aftale med den enkelte bruger.</p>
+    <p>Oplysningerne bruges også til at identificere elever og lærere overfor databehandleren til support-formål.</p>
+    <p>Databehandleren anvender udvalgte anonymiserede oplysninger til egne formål, f.eks. oplysninger om brugeradfærd til at kunne optimere Tjek web-stederne.</p>
+
+  </div>
+
+  <p><b>A.3. Behandlingen omfatter følgende typer af personoplysninger om de registrerede</b></p>
+
+  <div class="todo">
+    <p>[BESKRIV TYPEN AF PERSONOPLYSNINGER DER BEHANDLES]</p>
+
+    <p>[EKSEMPELVIS]</p>
+
+    <p>”Navn, e-mailadresse, telefonnummer, adresse, personnummer, betalingskortoplysninger, medlemsnummer, type af medlemskab, fremmøde i fitnesscenter og tilmelding til konkrete fitnesshold.”</p>
+
+    <p>[BEMÆRK: BESKRIVELSEN BØR VÆRE SÅ SPECIFIK SOM MULIGT, OG UNDER ALLE OMSTÆNDIGHEDER, SKAL TYPEN AF PERSONOPLYSNINGER PRÆCISERES YDERLIGERE END BLOT ”PERSONOPLYSNINGER SOM DEFINERET I DATABESKYTTELSESFORORDNINGENS ARTIKEL 4, NR. 1” ELLER HVILKEN KATEGORI AF OPLYSNINGER (”ARTIKEL 6, 9 ELLER 10”) DER BEHANDLES.]</p>
+  </div>
+
+  <ul class="jh">
+    <li>Læreres/elevers navne</li>
+    <li>Læreres/elevers login-ID</li>
+    <li>Elever og læreres e-mail adresser - hvis de vælger at oplyse dem til notifikations-formål</li>
+    <li>Logning af tidspunkt og IP-adresse ved login</li>
+    <li>Elevers resultater og besvarelser af opgavesæt</li>
+    <li>Beskeder fra lærere til elever</li>
+  </ul>
+
+  <p><b>A.4. Behandlingen omfatter følgende kategorier af registrerede</b></p>
+
+  <p class="todo">[BESKRIV KATEGORIERNE AF REGISTREREDE]</p>
+
+  <ul class="jh">
+    <li>Elever på uddannelsesinstitutioner (primært grundskole)</li>
+    <li>Lærere og andet uddannelsespersonale på uddannelsesinstitutioner (primært grundskole)</li>
+  </ul>
+
+  <p><b>A.5. Databehandlerens behandling af personoplysninger på vegne af den dataansvarlige kan påbegyndes efter disse Bestemmelsers ikrafttræden. Behandlingen har følgende varighed</b>
+
+  <p class="todo">[BESKRIV VARIGHEDEN AF BEHANDLINGEN]</p>
+
+  <p class="jh">
+    Behandlingen følger normalt skoleåret (august til juni).
+    Alle abonnementdata (inkl. personoplysninger) slettes hos databehandleren hvert år i juli.
+    Ved fornyelse af abonnement (for en skole), fortsætter behandlingen yderligere et skoleår (med nye personoplysninger).
+    Dataansvarlig dog kan til enhver til opsige abonnement og anmode om sletning af personoplysninger med en uges varsel.
+  </p>
+
+
+  <div class="pagebreak"></div>
+
+
+  <h3>Bilag B	- Underdatabehandlere</h3>
+
+  <p><b>B.1. Godkendte underdatabehandlere</b></p>
+
+  <div class="jhslet">
+    <p>Ved Bestemmelsernes ikrafttræden har den dataansvarlige godkendt brugen af følgende underdatabehandlere</p>
+
+    <p class="todo jhslet">NAVN	CVR	ADRESSE	BESKRIVELSE AF BEHANDLING</p>
+
+    <p>Ved Bestemmelsernes ikrafttræden har den dataansvarlige godkendt brugen af ovennævnte underdatabehandlere for den beskrevne behandlingsaktivitet. Databehandleren må ikke – uden den dataansvarliges skriftlige godkendelse – gøre brug af en underdatabehandler til en anden behandlingsaktivitet end den beskrevne og aftalte eller gøre brug af en anden underdatabehandler til denne behandlingsaktivitet.</p>
+  </div>
+  <p class="jh">Ingen (der må ikke anvendes underdatabehandlere jf. pkt. 7).</p>
+
+  <p><b>B.2. Varsel for godkendelse af underdatabehandlere</b></p>
+
+  <p class="todo">[VALGFRIT] [HVIS RELEVANT, BESKRIV VARSLINGSPERIODEN FOR GODKENDELSE AF UNDERDATABEHANDLER]</p>
+
+  <p class="jh">Ikke relevant (der må ikke anvendes underdatabehandlere jf. pkt. 7).</p>
+
+  <div class="pagebreak"></div>
+
+  <h3>Bilag C -	Instruks vedrørende behandling af personoplysninger</h3>
+
+  <p><b>C.1. Behandlingens genstand/instruks</b></p>
+
+  <p>Databehandlerens behandling af personoplysninger på vegne af den dataansvarlige sker ved, at databehandleren udfører følgende:</p>
+
+  <p class="todo">[BESKRIV BEHANDLINGEN, SOM DATABEHANDLEREN INSTRUERES I AT FORETAGE]</p>
+
+  <p class="jh">Behandler, opbevarer, fremviser data indtastet / angivet af elever og lærere i forbindelse med deres brug af Tjek-webstederne - jf. bilag A.</p>
+
+  <p><b>C.2. Behandlingssikkerhed</b></p>
+
+  <p>Sikkerhedsniveauet skal afspejle:</p>
+
+  <div class="todo">
+    <p>
+      [BESKRIV – UNDER HENSYNTAGEN TIL BEHANDLINGENS KARAKTER, OMFANG, SAMMEHÆNG OG FORMÅL SAMT RISICIENE AF VARIERENDE SANDDSYNLIGHED OG ALVOR FOR FYSISKE PERSONERS RETTIGHEDER OG FRIHEDSRETTIGHEDER – ELEMENTERNE, SOM ER AFGØRENDE FOR SIKKERHEDSNIVEAUET]<br />
+      <br />
+      [EKSEMPELVIS]<br />
+      <br />
+      ”BEHANDLINGEN OMFATTER EN STØRRE MÆNGDE PERSONOPLYSNINGER OMFATTET AF DATABESKYTTELSESFORORDNINGENS ARTIKEL 9 OM ”SÆRLIGE KATEGORIER AF PERSONOPLYSNINGER”, HVORFOR DER SKAL ETABLERES ET ”HØJT” SIKKERHEDSNIVEAU.”]
+    </p>
+  </div>
+
+  <div class="jh">
+    <p>Behandlingen omfatter kun almindelige personoplysninger (jf. Databeskyttelsesforordningens artikel 6).</p>
+    <p>
+      Behandlingen omfatter IKKE følsomme personoplysninger (jf. Databeskyttelsesforordningens artikel 9),
+      oplysninger om enkeltpersoners rent private forhold (jf. Databeskyttelsesforordningens artikel 6 og 9)
+      eller oplysninger om cpr-nummer (eventuelt national lovgivning, jf. Databeskyttelsesforordningens artikel 87).
+    </p>
+    <p>Ud fra typen af personoplysninger som behandles (se A.3), vurderes de konsekvenser der evt. kan være for de registrerede ved datatab eller datalæk, ikke at foranledige et særligt sikkerhedsniveau.</p>
+  </div>
+
+
+
+  <p>Databehandleren er herefter berettiget og forpligtet til at træffe beslutninger om, hvilke tekniske og organisatoriske sikkerhedsforanstaltninger, der skal gennemføres for at etableret det nødvendige (og aftalte) sikkerhedsniveau.</p>
+
+  <p>Databehandleren skal dog – under alle omstændigheder og som minimum – gennemføre følgende foranstaltninger, som er aftalt med den dataansvarlige:</p>
+
+  <ul>
+
+
+    <li>
+      <span class="todo">[BESKRIV KRAVENE TIL PSEUDONYMISERING OG KRYPTERING AF PERSONOPLYSNINGER]<br /></span>
+      <span class="jh">Personoplysninger pseudonymiseres og/eller krypteres hvor relevant.</span>
+    </li>
+
+    <li>
+      <span class="todo">[BESKRIV KRAVENE VEDRØRENDE EVNEN TIL AT SIKRE VEDVARENDE FORTROLIGHED, INTEGRITET, TILGÆNGELIGHED OG ROBUSTHED AF BEHANDLINGSSYSTEMER OG –TJENESTER]<br /></span>
+      <span class="jh">Vedvarende fortrolighed, integritet, tilgængelighed, samt robusthed af behandlingssystemer og tjenester, sikres som følger:<br /></span>
+      <ul class="jh">
+        <li>
+          <b>Fortrolighed:</b><br />
+          Personoplysninger, som behandles af databehandleren for dataansvarlig, eksisterer primært
+          på databehandlerens web-server som er fysik placeret i et aflåst lokale på
+          databehandlerens egen adresse.<br />
+          Det er udelukkende databehandlerens medarbejdere, der har et formål med at arbejde med
+          de pågældende personoplysninger, der har adgang til denne web-server.<br />
+          databehandlerens personale har adgang til personoplysninger med henblik på at udvikle,
+          problemsøge, teste og fejlfinde i interne systemer i forhold til at optimere vores
+          produkters performance og dermed understøtte formålet med databehandlingen.
+          Dette sker via en krypteret og sikret adgang med brugernavn og adgangskode.
+          Der bliver ført tilsyn med disse adgangstilladelser og disse ajourføres jævnligt.<br />
+          Databehandlerens lokale dataudstyr repareres og serviceres kun internt og kun af eget
+          personale.<br />
+          På harddiske, som skal ud af huset til destruktion, bliver hele harddisken først
+          overskrevet med tilfældig data med CBL Data Shredder programmet.<br />
+          Når der opsættes brugte computere til nye medarbejdere bliver alt data først slettet
+          ved først at overskrive hele harddisken med tilfældig data med CBL Data Shredder
+          programmet. Derefter installeres styresystem og applikationer på ny.<br />
+          Til autorisation/adgangskontrol af lærere og elever på databehandlerens Tjek-websteder
+          anvendes Uni-Login, Microsoft-konto eller Google-konto
+          (kan begrænses til en eller flere af disse pr. abonnement).<br />
+          Lærere og elever oprettes som brugere på databehandlerens Tjek-websteder, enten via
+          invitations-links, eller automatisk ved første log ind med Uni-Login.
+          Ved automatisk oprettelse af Uni-Login-brugere kontrolleres institutions-tilknytning
+          og rolle (lærer/elev) via Uni-Login webservices.<br />
+          Databehandleren opbevarer ikke læreres og elevers adgangskoder (hverken i klar tekst
+          eller krypteret), da dette er overladt til ovennævnte login-leverandører.
+        </li>
+        <li>
+          <b>Integritet:</b><br />
+          Nøjagtighed og fuldstændighed af persondata (lagret i en lokal Microsoft SQL
+          database) kontrolleres løbende med værktøjet "checkdb" (checksum kontrol).
+        </li>
+        <li>
+          <b>Tilgængelighed:</b><br />
+          Der laves automatisk daglig backup af komplet database.
+        </li>
+        <li>
+          <b>Robusthed:</b><br />
+          Web-server og Internet-router er forbundet til nødstrømsanlæg (UPS).
+        </li>
+      </ul>
+      <span class="jh">Der anvendes desuden firewall (hardware og software) samt anti-virus software.</span>
+    </li>
+
+    <li>
+      <span class="todo">[BESKRIV KRAVENE VEDRØRENDE EVNEN TIL RETTIDIGT AT GENOPRETTE TILGÆNGELIGHEDEN AF OG ADGANGEN TIL PERSONOPLYSNINGER I TILFÆLDE AF EN FYSISK ELLER TEKNISK HÆNDELSE]<br /></span>
+      <span class="jh">Rettidig genopretning af tilgængelighed og adgang til personoplysninger i tilfælde af en fysisk eller teknisk hændelse, sikres gennem backup, standby systemer, mv.</span>
+    </li>
+
+    <li>
+      <span class="todo">[BESKRIV KRAVENE VEDRØRENDE PROCEDURER FOR REGELMÆSSIG AFPRØVNING, VURDERING OG EVALUERING AF EFFEKTIVITETEN AF DE TEKNISKE OG ORGANISATORISKE FORANSTALTNINGER TIL SIKRING AF BEHANDLINGSSIKKERHEDEN]<br /></span>
+      <span class="jh">Der foretages regelmæssig afprøvning, vurdering og evaluering af effektiviteten af de tekniske og organisatoriske foranstaltninger til sikring af behandlingssikkerheden.</span>
+    </li>
+
+    <li>
+      <span class="todo">[BESKRIV KRAVENE VEDRØRENDE ADGANG TIL OPLYSNINGERNE VIA INTERNETTET]<br /></span>
+      <span class="jh">Adgang til personoplysninger via Internettet, sikres via adgangskontrol (login) samt SSL kryptering.</span>
+    </li>
+
+    <li>
+      <span class="todo">[BESKRIV KRAVENE VEDRØRENDE BESKYTTELSE AF OPLYSNINGER UNDER TRANSMISSION]<br /></span>
+      <span class="jh">Personoplysninger beskyttes under transmission via SSL kryptering.</span>
+    </li>
+
+    <li>
+      <span class="todo">[BESKRIV KRAVENE VEDRØRENDE BESKYTTELSE AF OPLYSNINGER UNDER OPBEVARING]<br /></span>
+      <span class="jh">Personoplysninger beskyttes under opbevaring via fysisk sikring samt netværksbeskyttelse (firewall mm.)</span>
+    </li>
+
+    <li>
+      <span class="todo">[BESKRIV KRAVENE VEDRØRENDE FYSISK SIKRING AF LOKALITETER, HVOR DER BEHANDLES OPLYSNINGER]<br /></span>
+      <span class="jh">Lokaliteter hvor der behandles personoplysninger sikres fysisk ved aflåsning.</span>
+    </li>
+
+    <li>
+      <span class="todo">[BESKRIV KRAVENE VEDRØRENDE ANVENDELSE AF HJEMME-/FJERNARBEJDSPLADSER]<br /></span>
+      <span class="jh">
+        Ved anvendelse af hjemmearbejdspladser tilgås personoplysninger på web-server via krypteret forbindelse (SSL)
+        til administrations-websted beskyttet med bruger-id og adgangskode.
+        Personoplysninger opbevares IKKE på lokale enheder, computere mv.
+      </span>
+    </li>
+
+    <li>
+      <span class="todo">[BESKRIV KRAVENE VEDRØRENDE LOGNING]<br /></span>
+      <span class="jh">Tidspunkt og IP-adresse logges ved log ind.</span>
+    </li>
+
+  </ul>
+
+
+
+  <p><b>C.3 Bistand til den dataansvarlige</b></p>
+
+  <p>Databehandleren skal så vidt muligt – inden for det nedenstående omfang og udstrækning – bistå den dataansvarlige i overensstemmelse med Bestemmelse 9.1 og 9.2 ved at gennemføre følgende tekniske og organisatoriske foranstaltninger:</p>
+
+  <p class="todo">
+    [BESKRIV OMFANG OG UDSTRÆKNING AF BISTANDEN SOM SKAL YDES AF DATABEHANDLEREN]<br />
+    <br />
+    [BESKRIV DE SPECIFIKKE TEKNISKE OG ORGANISATORISKE FORANSTALTNINGER SOM DATABEHANDLEREN SKAL GENNEMFØRE MED HENBLIK PÅ AT BISTÅ DEN DATAANSVARLIGE]
+  </p>
+
+  <div class="jh">
+    <p>
+      Som en integreret del af Tjek-webstederne kan dataansvarligs ansatte (lærere / administrativt personale) selv fremsøge, opdatere, og slette
+      alle personoplysninger opbevaret ved databehandleren.<br />
+      Dette kan anvendes af dataansvarlig ved anmodninger i forbindelse med registreredes ret til indsigt, berigtigelse, sletning, begrænsning af behandling, samt indsigelse (jf. 9.1.c/d/e/f/g/i).
+    </p>
+
+    <p>I forhold til registreredes "ret til oplysning" - ved første registrering oplyser databehandler de registrerede om hvad behandlingen indbefatter, herunder hvorfor personoplysningerne behandles, hvor længe de vil blive behandlet, og at vi behandler oplysningerne på vegne af dataansvarlig (jf. 9.1.a/b)</p>
+
+    <p>I forhold til registreredes "ret til dataportabilitet", er der ikke nogen personoplysninger under denne aftale, som teknisk set kan porteres eller som det ville give mening at portere (jf. 9.1.h).</p>
+
+    <p>
+      I forhold til registreredes "ret til ikke at være genstand for en automatisk afgørelse", gør databehandleren specifikt opmærksom på
+      at elevers test-resultater på Tjek-webstederne IKKE bør stå alene i standpunktsvurderinger af den enkelte elev (jf. 9.1.j).
+    </p>
+
+
+    <p>Databehandleren vil informere dataansvarlig om ethvert brud på persondatasikkerheden uden unødig forsinkelse og om muligt senest 24 timer efter at databehandleren er blevet bekendt med det (jf. 9.2.a/b).</p>
+
+    <p>Databehandleren har foretaget en konsekvensanalyse vedrørende databeskyttelse. Denne viser at behandlingen IKKE vil føre til en høj risiko. Derfor er der ikke belæg for at høre en tilsynsmyndighed (jf. 9.2.c/d).</p>
+
+  </div>
+
+
+
+  <p><b>C.4 Opbevaringsperiode/sletterutine</b></p>
+
+  <p class="todo">
+    [BESKRIV EVENTUEL OPBEVARINGSPERIODE/SLETTERUTINE FOR DATABEHANDLEREN]<br />
+    <br />
+    [EKSEMPELVIS]<br />
+    <br />
+    <i>
+      ”Personoplysninger opbevares i [ANGIV TIDSPERIODE], hvorefter de slettes hos databehandleren.<br />
+      <br />
+      Ved ophør af tjenesten vedrørende behandling af personoplysninger, skal databehandleren enten slette eller tilbagelevere personoplysningerne i overensstemmelse med bestemmelse 11.1, medmindre den dataansvarlige – efter underskriften af disse bestemmelser – har ændret den dataansvarlige oprindelige valg. Sådanne ændringer skal være dokumenteret og opbevares skriftligt, herunder elektronisk, i tilknytning til bestemmelserne.”
+    </i>
+  </p>
+
+  <div class="jh">
+    <p>Behandlingen følger normalt skoleåret (august til juni).</p>
+    <p>Alle abonnementdata (inkl. personoplysninger) slettes hos databehandleren hvert år i juli.</p>
+    <p>Ved fornyelse af abonnement (for en skole), fortsætter behandlingen yderligere et skoleår (med nye personoplysninger).</p>
+    <p>Dataansvarlig kan dog til enhver til opsige abonnement og anmode om sletning af personoplysninger med en uges varsel.</p>
+  </div>
+
+
+  <p><b>C.5 Lokalitet for behandling</b></p>
+  <p>Behandling af de af Bestemmelserne omfattede personoplysninger kan ikke uden den dataansvarliges forudgående skriftlige godkendelse ske på andre lokaliteter end følgende:</p>
+
+  <p class="todo">[ANGIV, HVOR BEHANDLINGEN FINDER STED] [ANGIV, HVILKEN DATABEHANDLER ELLER UNDERDATABEHANDLER, DER ANVENDER ADRESSEN]</p>
+
+  <p class="jh">
+    JH Software ApS<br />
+    Vesteråsene 34<br />
+    9900 Frederikshavn
+  </p>
+
+  <p><b>C.6 Instruks vedrørende overførsel af personoplysninger til tredjelande</b></p>
+
+  <p class="todo">
+    [BESKRIV INSTRUKSEN VEDRØRENDE OVERFØRSEL AF PERSONOPLYSNINGER TIL TREDJELANDE ELLER INTERNATIONALE ORGANISATIONER]<br />
+    <br />
+    [ANGIV GRUNDLAGET FOR OVERFØRSLEN SOM OMHANDLET I DATABESKYTTELSESFORORDNINGENS KAPITEL V]
+  </p>
+
+  <p class="jh">Databehandleren må ikke overføre personoplysninger til tredjelande eller internationale organisationer.</p>
+
+  <p class="jhslet">Hvis den dataansvarlige ikke i disse Bestemmelser eller efterfølgende giver en dokumenteret instruks vedrørende overførsels af personoplysninger til et tredjeland, er databehandleren ikke berettiget til inden for rammerne af disse Bestemmelser at foretage sådanne overførsler.</p>
+
+
+
+  <p><b>C.7 Procedurer for den dataansvarliges revisioner, herunder inspektioner, med behandlingen af personoplysninger, som er overladt til databehandleren</b></p>
+
+  <p class="todo">
+    [BESKRIV PROCEDURERNE FOR DEN DATAANSVARLIGES REVISIONER, HERUNDER INSPEKTIONER, MED BEHANDLINGEN AF PERSONOPLYSNINGER, SOM ER OVERLADT TIL DATABEHANDLEREN]<br />
+    <br />
+    [EKSEMPELVIS]<br />
+    <br />
+    <i>
+      ”Databehandleren skal [ANGIV TIDSPERIODE] for [EGEN/DEN DATAANSVARLIGES] regning indhente en [REVISIONSERKLÆRING/INSPEKTIONSRAPPORT] fra en uafhængig tredjepart vedrørende databehandlerens overholdelse af databeskyttelsesforordningen, databeskyttelsesbestemmelser i anden EU-ret eller medlemsstaternes nationale ret og disse Bestemmelser.<br />
+      <br />
+      Der er enighed mellem parterne om, at følgende typer af [REVISIONSERKLÆRINGER/INSPEKTIONSRAPPORT] kan anvendes i overensstemmelse med disse Bestemmelser:<br />
+      <br />
+      [BESKRIV AFTALTE REVISIONSERKLÆRINGER/INSPEKTIONSRAPPORTER]<br />
+      <br />
+      [REVISIONSERKLÆRINGEN/ INSPEKTIONSRAPPORTER] fremsendes uden unødig forsinkelse til den dataansvarlige til orientering. Den dataansvarlige kan anfægte rammerne for og/eller metoden i [ERKLÆRINGEN/RAPPORTEN] og kan i sådanne tilfælde anmode om en ny [REVISIONSERKLÆRING/ INSPEKTIONSRAPPORT] under andre rammer og/eller under anvendelse af anden metode.<br />
+      <br />
+      Baseret på resultaterne af [ERKLÆRINGEN/RAPPORTEN], er den dataansvarlige berettiget til at anmode om gennemførelse af yderligere foranstaltninger med henblik på at sikre overholdelsen af databeskyttelsesforordningen, databeskyttelsesbestemmelser i anden EU-ret eller medlemsstaternes nationale ret og disse Bestemmelser.<br />
+      <br />
+      Den dataansvarlige eller en repræsentant for den dataansvarlige har herudover adgang til at foretage inspektioner, herunder fysiske inspektioner, med lokaliteterne hvorfra databehandleren foretager behandling af personoplysninger, herunder fysiske lokaliteter og systemer, der benyttes til eller i forbindelse med behandlingen. Sådanne inspektioner kan gennemføres, når den dataansvarlige finder det nødvendigt.”<br />
+    </i>
+    <br />
+    [ELLER]<br />
+    <br />
+    <i>
+      ”Den dataansvarlige eller en repræsentant for den dataansvarlige foretager [ANGIV TIDSPERIODE] en fysisk inspektion af lokaliteterne, hvorfra databehandleren foretager behandling af personoplysninger, herunder fysiske lokaliteter og systemer, der benyttes til eller i forbindelse med behandlingen, med henblik på at fastslå databehandlerens overholdelse af databeskyttelsesforordningen, databeskyttelsesbestemmelser i anden EU-ret eller medlemsstaternes nationale ret og disse Bestemmelser.<br />
+      <br />
+      Ud over det planlagte tilsyn, kan den dataansvarlige gennemføre en inspektion hos databehandleren, når den dataansvarlige finder det nødvendigt.”<br />
+      <br />
+    </i>
+
+    [OG, HVIS RELEVANT]<br />
+    <br />
+    <i>”Den dataansvarliges eventuelle udgifter i forbindelse med en fysisk inspektion afholdes af den dataansvarlige selv. Databehandleren er dog forpligtet til at afsætte de ressourcer (hovedsageligt den tid), der er nødvendig(e) for, at den dataansvarlige kan gennemføre sin inspektion.”<br /></i>
+  </p>
+
+  <div class="jh">
+    <p>
+      Databehandleren skal en gang årligt vederlagsfrit til den dataansvarlige fremsende en
+      erklæring om overholdelse af denne aftale. Den første erklæring skal
+      foreligge senest 12 måneder efter aftalens indgåelse.</p>
+
+    <p>Ovennævnte erklæring vedhæftes en intern inspektionsrapport vedrørende databehandlerens overholdelse af databeskyttelsesforordningen, databeskyttelsesbestemmelser i anden EU-ret eller medlemsstaternes nationale ret og disse bestemmelser.</p>
+
+    <p>Den dataansvarlige kan stille opfølgende spørgsmål i form af spørgeskema eller lignende, hviket databehandleren skal besvare uden nødig forsinkelse.</p>
+
+   <p>Den dataansvarlige eller en repræsentant for den dataansvarlige har herudover adgang til at foretage inspektioner, herunder fysiske inspektioner, med lokaliteterne hvorfra databehandleren foretager behandling af personoplysninger, herunder fysiske lokaliteter og systemer, der benyttes til eller i forbindelse med behandlingen. Sådanne inspektioner kan gennemføres, når den dataansvarlige finder det nødvendigt.</p>
+  </div>
+
+    <p><b>C.8 <span class="todo">[HVIS RELEVANT]</span> Procedurer for revisioner, herunder inspektioner, med behandling af personoplysninger, som er overladt til underdatabehandlere</b></p>
+
+    <p class="todo">
+      [BESKRIV PROCEDURERNE FOR DATABEHANDLERENS REVISIONER, HERUNDER INSPEKTIONER, MED BEHANDLINGEN AF PERSONOPLYSNINGER, SOM ER OVERLADT TIL UNDERDATABEHANDLEREN]br/>
+      <br />
+      [EKSEMPELVIS]<br />
+      <br />
+      <i>
+        ”Databehandleren skal [ANGIV TIDSPERIODE] for [EGEN/UNDERDATABEHANDLERENS] regning indhente en [REVISIONSERKLÆRING/INSPEKTIONSRAPPORT] fra en uafhængig tredjepart vedrørende underdatabehandlerens overholdelse af databeskyttelsesforordningen, databeskyttelsesbestemmelser i anden EU-ret eller medlemsstaternes nationale ret og disse Bestemmelser.<br />
+        <br />
+        Der er enighed mellem parterne om, at følgende typer af [REVISIONSERKLÆRINGER/INSPEKTIONSRAPPORTER] kan anvendes i overensstemmelse med disse bestemmelser:<br />
+        <br />
+        [BESKRIV AFTALTE REVISIONSERKLÆRINGER/INSPEKTIONSRAPPORTER]<br />
+        <br />
+        [REVISIONSERKLÆRINGEN/INSPEKTIONSRAPPORT] fremsendes uden unødig forsinkelse til den dataansvarlige til orientering. Den dataansvarlige kan anfægte rammerne for og/eller metoden i [ERKLÆRINGEN/RAPPORTEN] og kan i sådanne tilfælde anmode om en ny [REVISIONSERKLÆRING/INSPEKTIONSRAPPORT] under andre rammer og/eller under anvendelse af anden metode.<br />
+        <br />
+        Baseret på resultaterne af [ERKLÆRINGEN/RAPPORTEN], er den dataansvarlige berettiget til at anmode om gennemførelse af yderligere foranstaltninger med henblik på at sikre overholdelsen af databeskyttelsesforordningen, databeskyttelsesbestemmelser i anden EU-ret eller medlemsstaternes nationale ret og disse Bestemmelser.<br />
+        <br />
+        Databehandleren eller en repræsentant for databehandleren har herudover adgang til at foretage inspektioner, herunder fysiske inspektioner, med lokaliteterne hvorfra underdatabehandleren foretager behandling af personoplysninger, herunder fysiske lokaliteter og systemer, der benyttes til eller i forbindelse med behandlingen. Sådanne inspektioner kan gennemføres, når databehandleren (eller den dataansvarlige) finder det nødvendigt.<br />
+        <br />
+        Dokumentation for sådanne inspektioner fremsendes uden unødig forsinkelse til den dataansvarlige til orientering. Den dataansvarlige kan anfægte rammerne for og/eller metoden af inspektionen og kan i sådanne tilfælde anmode om gennemførelsen af en ny inspektion under andre rammer og/eller under anvendelse af anden metode.”<br />
+      </i>
+      <br />
+      [ELLER]<br />
+      <br />
+      <i>
+        ”Databehandleren eller en repræsentant for databehandleren foretager [ANGIV TIDSPERIODE] en fysisk inspektion af lokaliteterne, hvorfra underdatabehandleren foretager behandling af personoplysninger, herunder fysiske lokaliteter og systemer, der benyttes til eller i forbindelse med behandlingen, med henblik på at fastslå underdatabehandlerens overholdelse af databeskyttelsesforordningen, databeskyttelsesbestemmelser i anden EU-ret eller medlemsstaternes nationale ret og disse Bestemmelser.<br />
+        <br />
+        Ud over det planlagte tilsyn, kan databehandleren gennemføre en inspektion med underdatabehandleren, når databehandleren (eller den dataansvarlige) finder det nødvendigt.<br />
+        <br />
+        Dokumentation for sådanne inspektioner fremsendes uden unødig forsinkelse til den dataansvarlige til orientering. Den dataansvarlige kan anfægte rammerne for og/eller metoden af inspektionen og kan i sådanne tilfælde anmode om gennemførelsen af en ny inspektion under andre rammer og/eller under anvendelse af anden metode.<br />
+        <br />
+        Baseret på resultaterne af tilsynet, er den dataansvarlige berettiget til at anmode om gennemførelse af yderligere foranstaltninger med henblik på at sikre overholdelse af databeskyttelsesforordningen, databeskyttelsesbestemmelser i anden EU-ret eller medlemsstaternes nationale ret og disse Bestemmelser.”<br />
+        <br />
+      </i>
+      [OG, HVIS RELEVANT]<br />
+      <br />
+      <i>
+        “Den dataansvarlige kan – hvis det findes nødvendigt – vælge at initiere og deltage på en fysisk inspektion hos underdatabehandleren. Dette kan blive aktuelt, hvis den dataansvarlige vurderer, at databehandlerens inspektion hos underdatabehandleren ikke har givet den dataansvarlige tilstrækkelig sikkerhed for, at behandlingen hos underdatabehandleren sker I overensstemmelse med databeskyttelsesforordningen, databeskyttelsesbestemmelser i anden EU-ret eller medlemsstaternes nationale ret og disse Bestemmelser.<br />
+        <br />
+        Den dataansvarliges eventuelle deltagelse i en inspektion hos underdatabehandleren ændrer ikke ved, at databehandleren også herefter har det fulde ansvar for underdatabehandlerens overholdelse af databeskyttelsesforordningen, databeskyttelsesbestemmelser i anden EU-ret eller medlemsstaternes nationale ret og disse Bestemmelser.”<br />
+      </i>
+      <br />
+      [OG, HVIS RELEVANT]<br />
+      <br />
+      <i>”Databehandlerens og underdatabehandlerens eventuelle udgifter i forbindelse med en fysisk inspektion af underdatabehandlerens lokaliteter er den dataansvarlige uvedkommende – uanset om den dataansvarlige har initieret og deltaget i en sådan inspektion.”</i>
+    </p>
+
+  <p class="jh">Ikke relevant, da der må ikke anvendes underdatabehandlere jf. pkt. 7.</p>
+
+  <div class="pagebreak"></div>
+
+  <h3>Bilag D	- Parternes regulering af andre forhold</h3>
+
+  <p class="jhnote">
+    Følgende punkter stammer fra
+    KLs dokument <a href="kl-hjaelp-til-udfyldelse-af-bilag-c-og-d-i-datatilsynets-standardkontraktsbestemmelser-v1-0.pdf" target="_blank">"Hjælp til udfyldelse af Bilag C og D i Datatilsynets standardkontraktsbestemmelser - Version 1.0 af 31. august 2020"</a>
+  </p>
+
+  <div class="jh">
+
+    <p></p>
+
+    <p><b>Behandling</b></p>
+
+    <ul>
+      <li>
+        Databehandleren skal behandle personoplysninger i overensstemmelse med god
+        databehandlingsskik, jf. de til enhver tid gældende regler og forskrifter for
+        behandling af personoplysninger.
+      </li>
+
+    </ul>
+
+    <p><b>Den dataansvarliges rettigheder og forpligtelser</b></p>
+
+    <ul>
+      <li>
+        Den dataansvarlige har ansvaret for, at de personoplysninger, som den dataansvarlige
+        instruerer databehandleren om at behandle, må behandles af databehandleren, herunder at behandlingen er nødvendig og legitim i forhold til den dataansvarliges opgavevaretagelse.
+      </li>
+
+    </ul>
+
+    <p><b>Databehandleren handler efter instruks</b></p>
+
+    <ul>
+      <li>Databehandleren har de forpligtelser, som er pålagt en databehandler i medfør af lovgivningen, jf. Bestemmelsernes pkt. 2.2.</li>
+
+      <li>
+        Databehandleren skal føre fortegnelser over behandlingen af personoplysninger
+        samt fortegnelser over alle brud på persondatasikkerheden.
+      </li>
+
+      <li>
+        Databehandleren er forpligtet til at oplyse med præcise adresseangivelser, hvor
+        Den dataansvarliges personoplysninger behandles, jf. bilag C,C.5. Databehandleren
+        skal ajourføre oplysningerne over for den dataansvarlige ved enhver ændring.
+      </li>
+      </ul>
+
+    <p><b>Fortrolighed</b></p>
+
+    <ul>
+      <li>
+        Databehandleren er - under og efter Hovedaftalens ophør - pålagt fuld tavshedspligt
+        omkring alle oplysninger, denne bliver bekendt med gennem samarbejdet. Bestemmelserne indebærer, at tavshedspligtsbestemmelserne i straffelovens §§ 152-152f, jf. straffelovens § 152a, finder anvendelse.
+      </li>
+
+
+      <li>
+        Databehandleren samt dennes ansatte er underlagt forbud mod at skaffe sig
+        oplysninger af enhver art, som ikke har betydning for udførelsen af den pågældendes opgaver.
+      </li>
+
+      <li>
+        Databehandleren må ikke hverken offentligt eller til tredjeparter kommunikere om
+        brud på persondatasikkerheden, jf. pkt 10.1 uden forudgående skriftlig aftale
+        med den dataansvarlige om indholdet af en sådan kommunikation, medmindre
+        databehandleren har en retlig forpligtelse til sådan kommunikation.
+      </li>
+
+    </ul>
+
+    <p><b>Behandlingssikkerhed</b></p>
+
+    <ul>
+      <li>
+        Databehandleren skal mindst en gang årligt gennemgå sine interne
+        sikkerhedsforskrifter og retningslinjer for behandlingen af personoplysninger
+        med henblik på at sikre, at de fornødne sikkerhedsforanstaltninger til stadighed
+        er iagttaget, jf. pkt. C,C.2.
+      </li>
+
+      <li>
+        Databehandleren har pligt til at instruere de ansatte, der har adgang til eller på
+        anden måde varetager behandling af den dataansvarliges personoplysninger, om
+        databehandlerens forpligtelser, herunder bestemmelserne om tavshedspligt og
+        fortrolighed, jf. pkt 5.
+      </li>
+
+      <li>
+        Databehandleren er forpligtet til uden unødig forsinkelse at underrette
+        den dataansvarlige om
+        <ol type="i">
+          <li>
+            enhver anmodning om videregivelse af personoplysninger omfattet
+            af Bestemmelserne fra en myndighed, medmindre orienteringen af den dataansvarlige er eksplicit forbudt ved lov, f.eks. i medfør af regler, der har til
+            formål at sikre fortroligheden af en retshåndhævende myndigheds efterforskning,
+          </li>
+          <li>
+            anden manglende overholdelse af databehandlerens, samt eventuelle
+            underdatabehandleres forpligtelser uanset, om dette sker hos databehandleren eller hos en underdatabehandler.
+          </li>
+        </ol>
+      </li>
+      </ul>
+
+    <p><b>Revision, herunder inspektion</b></p>
+    <ul>
+      <li>
+        Databehandleren er forpligtet til uden ugrundet ophold at give den dataansvarlige de
+        nødvendige oplysninger til, at den dataansvarlige til enhver tid kan sikre sig, at
+        databehandleren overholder de krav, der følger af disse Bestemmelser.
+      </li>
+
+      <li>
+        I forbindelse med revisioner, herunder inspektioner, har den dataansvarlige eller en repræsentant for den dataansvarlige ret til at få udleveret dokumentation, herunder logs,
+        stille spørgsmål m.v. med henblik på at konstatere, at databehandleren overholder de
+        krav, der følger af disse Bestemmelser.
+      </li>
+
+      <li>
+        I tilfælde af at Datatilsynet ønsker at foretage en inspektion af de ovennævnte
+        foranstaltninger i henhold til denne aftale, forpligter databehandleren og databehandlerens underdatabehandlere sig til uden yderligere omkostninger for den dataansvarlige
+        at stille tid og ressourcer til rådighed herfor.
+      </li>
+
+    </ul>
+
+
+  </div>
+
+</body>
+</html>
