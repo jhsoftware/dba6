@@ -66,7 +66,7 @@
 
     <div style="display:inline-block">
       <b>Udkast til JH Software Databehandleraftale v. 6</b>
-      Rev. 1 opdateret 17.5.2022 kl. 15:58.
+      Rev. 2 opdateret 9.6.2022 kl. 14:50.
     </div>
     <div style="display:inline-block">Baseret på Datatilsynets <a href="datatilsynet-skabelon-til-databehandleraftale-dansk-v1-1.docx">"Skabelon til databehandleraftale - dansk" version 1.1</a> (<a href="https://www.datatilsynet.dk/presse-og-nyheder/nyhedsarkiv/2019/dec/standardkontraktsbestemmelser-vedtaget-af-datatilsynet" target="_blank">info</a>)</div><br />
     <label><input type="checkbox" checked onchange="VisDet('.todo',this.checked)"> Vis originalt udskifteligt indhold (anvisninger, eksempler, mv.) <span class="todo">(gult)</span></label><br />
@@ -471,6 +471,12 @@
     </p>
     <p>Elevers og læreres e-mail adresser (hvis oplyst) bruges til administrative forhold (f.eks. ændring af adgangskode), notifikation om abonnement-forhold og evt. nyheder iht. aftale med den enkelte bruger.</p>
     <p>Oplysningerne bruges også til at identificere elever og lærere overfor databehandleren til support-formål.</p>
+
+    <p>Lærere og elever oprettes som brugere på databehandlerens Tjek-websteder, enten via
+    invitations-links, eller automatisk ved første log ind med Uni-Login.</p>
+    <p>Ved automatisk oprettelse af Uni-Login-brugere kontrolleres institutions-tilknytning
+    og rolle (lærer/elev) via Uni-Login webservice ("ws71/wsiBRUGER" / hentBrugersInstitutionstilknytninger). Der indhentes IKKE yderligere oplysninger om lærere/elever fra Uni-Login.</p>
+
     <p>Databehandleren anvender udvalgte anonymiserede oplysninger til egne formål, f.eks. oplysninger om brugeradfærd til at kunne optimere Tjek web-stederne.</p>
 
   </div>
@@ -487,14 +493,25 @@
     <p>[BEMÆRK: BESKRIVELSEN BØR VÆRE SÅ SPECIFIK SOM MULIGT, OG UNDER ALLE OMSTÆNDIGHEDER, SKAL TYPEN AF PERSONOPLYSNINGER PRÆCISERES YDERLIGERE END BLOT ”PERSONOPLYSNINGER SOM DEFINERET I DATABESKYTTELSESFORORDNINGENS ARTIKEL 4, NR. 1” ELLER HVILKEN KATEGORI AF OPLYSNINGER (”ARTIKEL 6, 9 ELLER 10”) DER BEHANDLES.]</p>
   </div>
 
-  <ul class="jh">
+  <div class="jh">
+  <p>Behandlingen omfatter kun almindelige personoplysninger (jf. Databeskyttelsesforordningens artikel 6).</p>
+  <p>
+    Behandlingen omfatter IKKE følsomme personoplysninger (jf. Databeskyttelsesforordningens artikel 9),
+    oplysninger om enkeltpersoners rent private forhold (jf. Databeskyttelsesforordningens artikel 6 og 9)
+    eller oplysninger om cpr-nummer (eventuelt national lovgivning, jf. Databeskyttelsesforordningens artikel 87).
+  </p>
+<p>Specifikt behandles følgende personoplysninger:</p>
+
+  <ul>
     <li>Læreres/elevers navne</li>
     <li>Læreres/elevers login-ID</li>
-    <li>Elever og læreres e-mail adresser - hvis de vælger at oplyse dem til notifikations-formål</li>
+    <li>Elever og læreres e-mail adresser - hvis de vælger at oplyse dem til login- eller notifikations-formål</li>
     <li>Logning af tidspunkt og IP-adresse ved login</li>
     <li>Elevers resultater og besvarelser af opgavesæt</li>
     <li>Beskeder fra lærere til elever</li>
   </ul>
+
+  </div>
 
   <p><b>A.4. Behandlingen omfatter følgende kategorier af registrerede</b></p>
 
@@ -551,6 +568,8 @@
 
   <p class="jh">Behandler, opbevarer, fremviser data indtastet / angivet af elever og lærere i forbindelse med deres brug af Tjek-webstederne - jf. bilag A.</p>
 
+  <p class="jh">Dette omfatter oprettelse og administration af lærere/elever, læreres beskeder til elever, læreres åbning af test-opgavesæt til besvarelse, elevers besvarelse af trænings og test-opgavesæt, læreres visning af opsummerede og individuelle test-resultater, mv.</p>
+
   <p><b>C.2. Behandlingssikkerhed</b></p>
 
   <p>Sikkerhedsniveauet skal afspejle:</p>
@@ -566,13 +585,7 @@
   </div>
 
   <div class="jh">
-    <p>Behandlingen omfatter kun almindelige personoplysninger (jf. Databeskyttelsesforordningens artikel 6).</p>
-    <p>
-      Behandlingen omfatter IKKE følsomme personoplysninger (jf. Databeskyttelsesforordningens artikel 9),
-      oplysninger om enkeltpersoners rent private forhold (jf. Databeskyttelsesforordningens artikel 6 og 9)
-      eller oplysninger om cpr-nummer (eventuelt national lovgivning, jf. Databeskyttelsesforordningens artikel 87).
-    </p>
-    <p>Ud fra typen af personoplysninger som behandles (se A.3), vurderes de konsekvenser der evt. kan være for de registrerede ved datatab eller datalæk, ikke at foranledige et særligt sikkerhedsniveau.</p>
+    <p>Ud fra typen af personoplysninger som behandles (kun almindelige personoplysninger - se A.3), vurderes de konsekvenser der evt. kan være for de registrerede ved datatab eller datalæk, ikke at foranledige et særligt sikkerhedsniveau.</p>
   </div>
 
 
@@ -586,7 +599,8 @@
 
     <li>
       <span class="todo">[BESKRIV KRAVENE TIL PSEUDONYMISERING OG KRYPTERING AF PERSONOPLYSNINGER]<br /></span>
-      <span class="jh">Personoplysninger pseudonymiseres og/eller krypteres hvor relevant.</span>
+      <span class="jh">Ved enhver form for transmission af personoplysninger over Internettet samt over databehandlers lokalnetværk, anvendes kryptering (TLS/SSL).<br/>
+      Personoplysninger pseudonymiseres så vidt muligt - f.eks. I databehandlers administrative systemer, hvor personoplysninger kun fremgår når det er absolut nødvendigt, og da kun for autoriseret personale.</span>
     </li>
 
     <li>
@@ -613,14 +627,12 @@
           ved først at overskrive hele harddisken med tilfældig data med CBL Data Shredder
           programmet. Derefter installeres styresystem og applikationer på ny.<br />
           Til autorisation/adgangskontrol af lærere og elever på databehandlerens Tjek-websteder
-          anvendes Uni-Login, Microsoft-konto eller Google-konto
-          (kan begrænses til en eller flere af disse pr. abonnement).<br />
-          Lærere og elever oprettes som brugere på databehandlerens Tjek-websteder, enten via
-          invitations-links, eller automatisk ved første log ind med Uni-Login.
-          Ved automatisk oprettelse af Uni-Login-brugere kontrolleres institutions-tilknytning
-          og rolle (lærer/elev) via Uni-Login webservices.<br />
-          Databehandleren opbevarer ikke læreres og elevers adgangskoder (hverken i klar tekst
-          eller krypteret), da dette er overladt til ovennævnte login-leverandører.
+          anvendes 3. parts login-leverandører (herunder Uni-Login, Microsoft-konto og Google-konto)
+          eller log ind med e-mail og adgangskode.
+          Dataansvarlig kan (via Tjek-websted eller striftlig instruks) begrænse dette til en eller flere specifikke leverandører / metoder pr. abonnement.<br />
+          Ved log ind med 3. parts login-leverandør opbevarer Databehandleren ikke læreres og elevers adgangskoder (hverken i klar tekst
+          eller krypteret), da dette er overladt til login-leverandøreren.<br/>
+          Ved log ind med e-mail og adgangskode, opbevarer Databehandleren kun en hash-værdi (SHA2 eller bedre, salted, mv.) af læreres og elevers adgangskoder, og har dermed ikke adgang til selve adgangskoden.         
         </li>
         <li>
           <b>Integritet:</b><br />
@@ -812,7 +824,7 @@
 
     <p>Ovennævnte erklæring vedhæftes en intern inspektionsrapport vedrørende databehandlerens overholdelse af databeskyttelsesforordningen, databeskyttelsesbestemmelser i anden EU-ret eller medlemsstaternes nationale ret og disse bestemmelser.</p>
 
-    <p>Den dataansvarlige kan stille opfølgende spørgsmål i form af spørgeskema eller lignende, hviket databehandleren skal besvare uden nødig forsinkelse.</p>
+    <p>Den dataansvarlige kan stille opfølgende spørgsmål i form af spørgeskema eller lignende, hvilket databehandleren skal besvare uden nødig forsinkelse.</p>
 
    <p>Den dataansvarlige eller en repræsentant for den dataansvarlige har herudover adgang til at foretage inspektioner, herunder fysiske inspektioner, med lokaliteterne hvorfra databehandleren foretager behandling af personoplysninger, herunder fysiske lokaliteter og systemer, der benyttes til eller i forbindelse med behandlingen. Sådanne inspektioner kan gennemføres, når den dataansvarlige finder det nødvendigt.</p>
   </div>
@@ -997,6 +1009,17 @@
 
     </ul>
 
+    <p><b>Aktindsigt</b></p>
+
+    <ul>
+      <li>Ved udvikling forpligter Databehandler sig til at sikre, at it-løsningen/leverancen tager højde for at der skal kunne gives aktindsigt.</li>
+      <li>Ved idriftsætning og under drift er Databehandler forsat forpligtet til at sikre, at løsningen tager højde for at der skal kunne gives aktindsigt.<br/>
+        <br/>
+       Begge dele er lovfæstet i principperne i Offentlighedslovens § 1, stk. 3, samt §§ 11 og 12.<br/>
+       Sammenholdt med Folketingets Ombudsmandskrav om at, der tages højde for forvaltningsretlige krav i forhold til nye it-løsninger, 
+       jf. ombudsmandens notat "Generelle forvaltningsretlige krav til offentlige IT-systemer" som forefindes på https://www.ombudsmanden.dk/myndighedsguiden/specifikke_sagsomraader/generelle_forvaltningsretlige_krav_til_offentlige_it-systemer/<br/>
+       Såfremt it-løsningen/leverancen ikke tager højde for forvaltningsretlige krav, kan Dataansvarlig opsige Aftalen uden varsel.</li>
+    </ul>
 
   </div>
 
